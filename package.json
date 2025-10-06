@@ -1,0 +1,26 @@
+{
+  "name": "backend-bancodedados",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cls && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "studio": "npx prisma studio",
+  },
+  "keywords": [
+    "banco de dados",
+    "MVC",
+    "HarryPotter"
+  ],
+  "author": "Nicolas Silva",
+  "license": "MIT",
+  "description": "conexão de backend com banco de dados",
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.16.3"
+  }
+}
