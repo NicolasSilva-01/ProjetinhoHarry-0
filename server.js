@@ -1,22 +1,24 @@
 
-import express from "express";
+// server.js (na raiz)
+import express from 'express';
 import dotenv from "dotenv";
-
+import bruxoRoutes from './src/routes/bruxoRoutes.js';
 
 const app = express();
-app.use(express.json());
+const PORT = 3001;
 
+app.use(express.json());
 
 dotenv.config();
 const serverPort = process.env.PORT || 3001;
 
 
 app.get("/", (req, res) => {
-    res.send("🚀 Servidor funcionando...");
+    res.send("🚀 servidor funcionando...");
 });
 
-// Aqui vão todas suas Rotas
+app.use('/bruxos', bruxosRoutes);
 
-app.listen(serverPort, () => {
-    console.log(`🚀 Servidor rodando em http://localhost:${serverPort} 🚀`);
+app.listen(PORT, () => {
+  console.log(`🪄 API em http://localhost:${PORT}`);
 });
